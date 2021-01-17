@@ -22,9 +22,9 @@ router.get('/add/category', async (req, res, next) => {
 /* Post restaurant*/
 router.post('/add/submit', async (req, res, next) => {
   try {
-    console.log(req.body)
-    const restaurant = req.body
-    await addRestaurantService.addRestaurant(restaurant)
+    const {name, link, category, rate} = req.body
+    console.log(link)
+    await addRestaurantService.addRestaurant(name, link, category, rate)
     res.status(200).json({ status: 200, msg: 'Success' })
 } catch (err) {
     res.status(500).json({ msg: err.message })

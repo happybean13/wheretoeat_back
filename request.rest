@@ -1,0 +1,9 @@
+POST http://localhost:3000/add/submit
+Content-Type: application/json
+
+{
+    "name" : "name test",
+    "link" : "www.naver.com",
+    "category" : "한식",
+    "rate" : 4
+}
